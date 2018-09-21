@@ -10,24 +10,28 @@ Requires a mininum version of **Swift 4.2**.
 
 ## Prerequisites
 
-YAMLSerialization depends on the external [LibYAML](https://github.com/yaml/libyaml) system library. Installation instructions for macOS, Ubuntu, and Fedora are below.
+YAMLSerialization depends on the external [LibYAML](https://github.com/yaml/libyaml) system library and pkg-config. Installation instructions for macOS, Ubuntu, and Fedora are below.
 
 ### macOS
 
 ```
 $ brew install libyaml
+$ brew install pkg-config
 ```
 
 ### Ubuntu
 
 ```
-$ brew install libyaml-dev
+# apt-get update
+# apt-get install libyaml-dev
+# apt-get install pkg-config
 ```
 
 ### Fedora
 
 ```
-$ dnf install libyaml-devel
+# dnf install libyaml-devel
+# dnf install pkg-config
 ```
 
 ## Example

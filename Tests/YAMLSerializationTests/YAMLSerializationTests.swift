@@ -1,5 +1,6 @@
 import XCTest
 @testable import YAMLSerialization
+import yaml
 
 final class YAMLSerializationTests: XCTestCase {
     func testExample() {

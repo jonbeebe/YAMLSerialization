@@ -3,6 +3,12 @@
 
 import PackageDescription
 
+#if os(macOS)
+	let yamlPkg = "yaml-0.1" // this is what homebrew installs package as
+#else
+	let yamlPkg = "yaml"
+#endif
+
 let package = Package(
     name: "YAMLSerialization",
     products: [
@@ -20,7 +26,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .systemLibrary(
             name: "yaml",
-            pkgConfig: "yaml",
+            pkgConfig: yamlPkg,
             providers: [
                 .brew(["libyaml"]),
                 .apt(["libyaml-dev"])
